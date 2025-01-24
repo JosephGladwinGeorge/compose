@@ -191,6 +191,7 @@ func runCommand(p *ProjectOptions, dockerCli command.Cli, backend api.Service) *
 	flags.BoolVarP(&options.servicePorts, "service-ports", "P", false, "Run command with all service's ports enabled and mapped to the host")
 	flags.StringVar(&createOpts.Pull, "pull", "policy", `Pull image before running ("always"|"missing"|"never")`)
 	flags.BoolVar(&options.quietPull, "quiet-pull", false, "Pull without printing progress information")
+	flags.BoolVar(&buildOpts.quiet, "quiet-build", false, "Build without printing progress information")
 	flags.BoolVar(&createOpts.Build, "build", false, "Build image before starting container")
 	flags.BoolVar(&options.removeOrphans, "remove-orphans", false, "Remove containers for services not defined in the Compose file")
 
